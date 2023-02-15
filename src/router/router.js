@@ -603,6 +603,7 @@ router.post("/Emission", function (request, response) {
 router.post("/MainSection", function (request, response) {
   console.log("MainSection 라우터 진입");
 
+  let ID = request.body.ID;
   // n만큼의 시간을 더하면 날짜를 반환해줌
   function StringToHours(n) {
     let stringNewDate = new Date();
@@ -628,7 +629,7 @@ router.post("/MainSection", function (request, response) {
 
   // 시간단위 전력 가져오기
   let date = StringToHours(0);
-  let sql = `select sum(use_power) power, sum(use_carborn) carborn from dayuse WHERE use_day BETWEEN "${date.slice(0,10)} 00:00:00" AND "${date}"`;
+  let sql = `select sum(use_power) power, sum(use_carborn) carborn from dayuse WHERE use_day BETWEEN "${date.slice(0,10)} 00:00:00" AND "${date} and use_id = ${ID}"`;
 
   conn.query(sql, function (err, rows) {
     if (rows.length > 0) {
