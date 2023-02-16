@@ -107,7 +107,7 @@ const Login = () => {
             sx={{ width: 365.3946228027344 }}
             color="primary"
             variant="standard"
-            type="text"
+            type="password"
             label="PW"
             placeholder="PW"
             size="medium"

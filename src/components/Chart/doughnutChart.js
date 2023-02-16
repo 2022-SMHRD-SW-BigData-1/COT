@@ -103,7 +103,7 @@ const DoughnutChart= () =>{
         ctx.fillStyle = "white";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText("22년 배출 총량", xCoor - 40, yCoor + 15);
+        ctx.fillText("23년 총 할당량", xCoor - 40, yCoor + 15);
 
         ctx.font = "bolder 25px sans-serif";
         ctx.fillStyle = "white";
